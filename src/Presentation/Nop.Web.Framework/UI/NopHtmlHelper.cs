@@ -413,7 +413,7 @@ namespace Nop.Web.Framework.UI
                     continue;
                 }
 
-                var asset = GetOrCreateBundle(item.Src, CreateCssAsset);
+                var asset = GetOrCreateBundle(item.Src, CreateJavaScriptAsset);
 
                 result.AppendFormat("<script type=\"{0}\" src=\"{1}?v={2}\"></script>",
                     MimeTypes.TextJavascript, asset.Route, asset.GenerateCacheKey(_actionContextAccessor.ActionContext.HttpContext));
